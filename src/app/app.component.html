@@ -1,0 +1,31 @@
+<!-- Navbar -->
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <button class="button navbar-burger" data-target="navbar" [class.is-active]="burgerSwitch" (click)="toggleBurger()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div id="navbar" class="navbar-menu" [class.is-active]="burgerSwitch">
+    <div class="navbar-start">
+      <a class="navbar-item" href="https://github.com/">GitHub Home</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Website Content -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <router-outlet></router-outlet>
+
+
+      </div>
+    </div>
+  </div>
+</section>

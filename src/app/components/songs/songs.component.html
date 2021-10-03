@@ -1,0 +1,15 @@
+<tr  *ngFor="let a of user;first as isFirst">
+
+  <td *ngIf="isFirst"> <h1 style ="font-size: 30px;">{{a.artist.name}}</h1> <img mat-card-sm-image src="{{a.artist.picture_big}}" /> </td>
+
+</tr >
+<h1 style ="font-size: 40px;">Albums</h1>
+<tr  *ngFor="let u of user" >
+  <td>
+   <h1 style="font-size: 18px;"> {{u.title}}</h1>
+ <img mat-card-sm-image src="{{u.album.cover_big}}" /> 
+ <button routerLink="/songs"> View album details</button>
+
+  </td>
+  
+  </tr>

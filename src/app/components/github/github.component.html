@@ -1,0 +1,32 @@
+<!-- Search Form -->
+<h1> Deezer application </h1>
+<form (ngSubmit)="search()">
+  <label class="label">Search Artist here:</label>
+    <div class="field has-addons">
+      <div class="control has-icons-left is-expanded">
+        <input name="username" class="input" type="text" placeholder="Enter artist's name......" [(ngModel)]="username">
+        <span class="icon is-small is-left"><i class="fab fa-github"></i></span>
+      </div>
+      <div class="control"><button class="button is-link">Search</button></div>
+    </div>
+</form><br>
+
+
+<tr  *ngFor="let a of user;first as isFirst">
+  <td *ngIf="isFirst"> <h1 style="font-size: 25px;">{{a.artist.name}}</h1>  <img mat-card-sm-image src="{{a.artist.picture_big}}" /> </td>
+ 
+</tr>
+
+<tr *ngFor="let u of user; let i = index;last as isLast" >
+
+ 
+  <td *ngIf="isLast">
+    <h1 style="font-size: 25px;">Number Of Albums : {{i + 1}}</h1>
+    <h1 style="font-size: 25px;">Number of Fans : {{u.rank}}</h1>
+  </td>
+  
+
+
+</tr>
+<br>
+<button routerLink="/details"> Artist details</button>

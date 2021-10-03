@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styles: []
+})
+export class AppComponent {
+
+  burgerSwitch: boolean;
+
+  constructor() { }
+
+  toggleBurger() {
+    this.burgerSwitch = !this.burgerSwitch;
+  }
+
+}
